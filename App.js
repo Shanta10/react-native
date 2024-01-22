@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import ImageViewer from './components/ImageViewer';
 import Button from './components/Button';
 
-const PlaceholderImage = require('./assets/messi.jpeg')
+const PlaceholderImage = require('./assets/messi.jpeg');
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
         <ImageViewer placeholderImageSource={PlaceholderImage} />
       </View>
       <View style={styles.footerContainer}>
-        <Button label="Choose a photo" />
+        <Button theme="primary" label="Choose a photo" style={styles.primaryButton} />
         <Button label="Use this photo" />
       </View>
       <StatusBar style="auto" />
@@ -35,5 +35,13 @@ const styles = StyleSheet.create({
     width: 320,
     height: 440,
     borderRadius: 18,
+  },
+  footerContainer: {
+    flex: 1 / 3,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  primaryButton: {
+    width: 200,
   },
 });
